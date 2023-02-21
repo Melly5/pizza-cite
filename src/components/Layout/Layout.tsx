@@ -7,9 +7,9 @@ interface Props {
 
 export const Layout: React.FC<Props> = ({ children }) => {
   return (
-    <>
+    <div style={{ width: '100vw' }}>
       <Header />
       <main>{children}</main>
-    </>
+    </div>
   );
 };
