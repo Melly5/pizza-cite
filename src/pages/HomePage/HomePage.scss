@@ -14,7 +14,7 @@
   }
 
   $angle: math.div(360, 16);
-  $rot: -169;
+  $rot: -168;
   @for $i from 1 through $nb-items {
     > :nth-of-type(#{$i}) {
       transform: rotate($rot * 1deg) translate($half-parent);
@@ -24,16 +24,16 @@
 }
 .wrapper {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 185px);
   background-image: url('/files/homepage/bg-homepage.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   .ingredients {
-    @include distribute-on-circle(8, 1280px, 8em);
+    @include distribute-on-circle(8, 1140px, 8em);
     width: 100%;
     position: fixed;
-    bottom: -5px;
+    bottom: -2px;
 
     &__item {
       img {
