@@ -1,4 +1,5 @@
 @use 'sass:math';
+@import '../../assets/global-scss/button';
 @mixin distribute-on-circle($nb-items, $circle-size, $item-size) {
   $half-item: math.div($item-size, 2);
   $half-parent: math.div($circle-size, 2);

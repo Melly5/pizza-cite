@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './HomePage.scss';
 
 export const HomePage = () => {
@@ -22,6 +23,9 @@ export const HomePage = () => {
           </li>
         ))}
       </ul>
+      <Link className='link' to='/pizzas'>
+        <button className='button active main'>ЗАКАЗАТЬ</button>
+      </Link>
     </div>
   );
 };
