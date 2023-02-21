@@ -1,4 +1,5 @@
 import React from 'react';
+import './HomePage.scss';
 
 export const HomePage = () => {
   const speciesArray = [
@@ -12,5 +13,15 @@ export const HomePage = () => {
     '/files/homepage/sausages.png'
   ];
 
-  return <div>Home</div>;
+  return (
+    <div className='wrapper'>
+      <ul className='ingredients'>
+        {speciesArray.map((image) => (
+          <li className='ingredients__item' key={image}>
+            <img src={image} alt='' />
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 };
