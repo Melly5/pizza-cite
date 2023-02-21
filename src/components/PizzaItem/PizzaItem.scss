@@ -1,0 +1,48 @@
+@import '../../assets/global-scss/fonts';
+@import '../../assets/global-scss/variables';
+@import '../../assets/global-scss/button';
+
+.pizza-item-wrapper {
+  width: 280px;
+  text-align: center;
+  margin-bottom: 65px;
+  padding: 35px 30px;
+  border: 3px solid $color-grey;
+  border-radius: 14px;
+  font-family: $inter;
+
+  .image {
+    width: 240px;
+  }
+  .name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .title {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 1%;
+    }
+  }
+
+  .ingredients {
+    padding-top: 10px;
+    height: 100px;
+    text-indent: 0; /* Отступ первой строки */
+    text-align: left;
+  }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    margin-bottom: 2px;
+  }
+
+  .price {
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 0.015em;
+  }
+}
