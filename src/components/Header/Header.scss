@@ -1,0 +1,34 @@
+@import '../../assets/global-scss/fonts';
+
+.header-wrapper {
+  width: 100%;
+  background-image: url('../../../public/files/header/bg-header.png');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 40px 80px;
+  .name {
+    width: fit-content;
+    margin-left: 30px;
+    font-size: 30px;
+    font-family: $logo-font;
+    color: white;
+  }
+  .image {
+    margin: 0 30px;
+  }
+  .variants {
+    display: flex;
+    width: 100vw;
+    padding: 0 300px;
+    p {
+      padding: 0 30px;
+      color: white;
+      font-size: 20px;
+      font-family: $inter;
+    }
+    .link {
+      text-decoration: none;
+    }
+  }
+}
