@@ -31,7 +31,7 @@
   background-position: center center;
   background-size: cover;
   .ingredients {
-    @include distribute-on-circle(8, 1140px, 8em);
+    @include distribute-on-circle(8, 1230px, 8em);
     width: 100%;
     position: fixed;
     bottom: -2px;
