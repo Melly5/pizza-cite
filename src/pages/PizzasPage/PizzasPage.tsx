@@ -1,11 +1,18 @@
 import React from 'react';
-import { Categories } from '@components/Categories/Categories';
-import './PizzasPage.scss';
-import { PizzaItem } from '@components/PizzaItem/PizzaItem';
+import { useSelector, useDispatch } from 'react-redux';
+
 import { Service } from '@utils/api/requests';
+import { Categories } from '@components/Categories/Categories';
+import { PizzaItem } from '@components/PizzaItem/PizzaItem';
+import { RootState } from '@redux/store';
+import { setCategoryId } from '@redux/slices/filterSlice';
+
+import './PizzasPage.scss';
 
 export const PizzasPage = () => {
-  const [categoryId, setCategoryId] = React.useState<any>(0);
+  const categoryId = useSelector((state: RootState) => state.filter.categoryId);
+  const dispatch = useDispatch();
+
   const categoryNames = ['new', 'spicy', 'vegeterian'];
   const [data, setData] = React.useState([] as any);
 
@@ -29,7 +36,7 @@ export const PizzasPage = () => {
       <Categories
         value={categoryId}
         onClickCategory={(id: number) => {
-          setCategoryId(id);
+          dispatch(setCategoryId(id));
         }}
       />
       <div className='pizzas-items'>
