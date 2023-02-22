@@ -1,8 +1,13 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+
+import { RootState } from '@redux/store';
+
 import './Header.scss';
 
 export const Header = () => {
+  const { items } = useSelector((state: RootState) => state.cart);
   return (
     <div className='header-wrapper'>
       <p className='name'>SANTORINIZ</p>
@@ -15,7 +20,7 @@ export const Header = () => {
           <p>Выбрать пиццу</p>
         </Link>
         <Link className='link' to='/cart'>
-          <p>Оформить заказ</p>
+          <p>Оформить заказ({items.length})</p>
         </Link>
       </div>
     </div>
