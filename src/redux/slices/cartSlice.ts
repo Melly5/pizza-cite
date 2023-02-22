@@ -11,8 +11,21 @@ export interface PizzaItem {
   name: string;
   ingredients: Array<string>;
   img: string;
-  price: [];
-  classifications: [];
+  price: {
+    default: number;
+    size:{
+        small: number,
+        medium: number,
+        large: number
+    };
+    crust:        [];
+  };
+  classifications: {
+    new: boolean,
+    spicy: boolean,
+    vegetarian: boolean
+  };
+
 }
 
 const initialState: CartState = {
